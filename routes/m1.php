@@ -10,6 +10,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PackageAssignController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductRedisController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TaskAssignController;
@@ -129,6 +130,9 @@ Route::middleware('admin_auth')->group(function () {
 
     // Help Center
     Route::resource('helpCenter', HelpCenterController::class);
+
+    // redisProducts
+    Route::resource('redisProducts', ProductRedisController::class);
 });
 
 // user part
